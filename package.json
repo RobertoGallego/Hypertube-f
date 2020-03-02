@@ -1,0 +1,24 @@
+{
+    "name": "hyper",
+    "version": "1.0.0",
+    "description": "merng",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "server": "cd api && npm run start",
+        "client": "cd ui && npm start",
+        "update": "cd api && npm install && cd ../ui && npm install && cd ../ && npm install && echo Ready to start: '\\033[0;32m'npm run dev",
+        "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
+    },
+    "author": "team dame",
+    "license": "ISC",
+    "devDependencies": {
+        "concurrently": "^5.1.0"
+    },
+    "dependencies": {
+        "peerflix": "^0.39.0",
+        "react-apollo": "^3.1.3",
+        "react-moment": "^0.9.7",
+        "semantic-ui-react": "^0.88.2"
+    }
+}
